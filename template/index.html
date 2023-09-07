@@ -1,0 +1,169 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/utils.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   
+</head>
+<body>
+    
+  <header>
+
+    <div class="head-section layout ">
+        <div class="nav-bar flex space-between align-center new1">
+            <div style="font-size: 30px;" class="logo uppercase f-w-700 letter-spacing2"><span>Manish</span> Singh</div>
+            <div class="nav_links">
+                <ul class="flex f-w-600">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="" >Projects</a></li>
+                    <li><a href="#">ContactMe</a></li>
+                </ul>
+            </div>
+            <button class="btn">Hire Me</button>
+            
+        </div>
+    </div>    
+   </header>        
+        <!-- content   -->
+        <div class="layout content flex align-center">
+          <!-- left section -->
+            <div class="left flex2">
+               <h1 id="about" style="font-size: 30px; "  >About</h1>
+               <br>
+               <br>
+                 <h2 class="uppercase letter-spacing2 ">Hey, I'm <span style="font-size: 23px;">Manish</span></h2>
+                 <h3 class="my-t-10 uppercase letter-spacing2"></h3>
+                 <p style="font-size: 20px;" class="my-t-10">I am currently persuing my B.tech and i am a <span>Web Developer</span></p>
+                 <p style="font-size: 20px;" >and looking for a job opportunity. </p>
+                 <br>
+                 <br>
+                 <h2>Technical Skills</h2>
+                 <br>
+                 <li>C++</li>
+                 <li>Python</li>
+                 <li>Java(basics)</li>
+                 <li>Data Structures and Algorithm</li>
+                 <li>HTML, CSS</li>
+                 <li>Django</li>
+
+                 <button class="btn btn2 my-t-20">Download CV</button>
+            </div>
+
+         <!-- right section -->
+            <div class="right flex3">
+               <div class="all-images">
+                 <div class="color-box"></div> 
+                 <img src="{% static 'img/myphoto.png' %}" alt="my_photo" id="myImage">
+                
+               </div> 
+
+            </div>
+        </div>
+    
+
+      <div class="container layout ">
+
+         <div id="contain" class="contain">
+            
+            <h1 style="border-bottom: 3px solid red;" >Projects</h1>
+                <div class="project1">
+                    <br>
+                    <br>
+                    <h2>Blogging <span style="font-size: 25px;"> Website</span></h2>
+                    <br>
+                    <div class="image" >
+                        <img id="blogging" src="{% static 'img/Best-Blogging-Platforms-featured-image.png' %}" alt="this is for alternate">
+                    </div>
+                    <br>
+                    <p style="font-size: 18px;" > Blogging website is generally a webisite in which some popular blogs is shown to the user 
+                        in which the user can read some popular blogs and also can read about full description about the blog.
+                    </p>
+                </div>
+                <div class="project2">
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <h2>My Online Shopping <span style="font-size: 25px;"> App</span></h2>
+                    <br>
+                    <div class="image" >
+                        <img id="blogging" src="{% static 'img/shopping.png' %}" alt="this is for alternate">
+                    </div>
+                    <br>
+                    <p style="font-size: 18px;" >My Online Shopping App is an shopping e-commerce app for android users only.
+                        The app is able to view serveral products register on the app, and also can see full description about 
+                        the product.
+                    </p>
+                    
+                </div>
+         </div>
+      </div>
+      
+
+
+     <div class="contact layout ">
+        <div class="contactme">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <h1 style="border-bottom: 3px solid red;" >Contact Me</h1>
+            
+        
+           <div class="background">
+                <form action="" method="post">
+                     {% csrf_token %}
+                     <label for="username">Your Name</label>
+                     <input type="text" placeholder="Your Name" id="username" name="username">
+                   
+                     <label for="password">Email</label>
+                     <input type="email" placeholder="email" id="password" name="email"> 
+                   
+                     <label for="password">Message</label>
+                     <input type="text" placeholder="Type Your Message" name="password">
+                     
+                     <button type="submit">Submit</button>
+                     <br>
+                </form>
+            </div>
+
+            
+            
+        </div>
+     </div>
+
+
+   <footer > 
+         <div class="footerContainer">
+            <div class="social">
+                <a href=""><i class="fa-brands fa-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                <a href=""><i class="fa-brands fa-github"></i></a>
+             </div>
+
+         <div class="footer-nav">
+            <ul>
+
+               <li><a href="">Home</a></li>
+               <li><a href="">About</a></li>
+               <li><a href="">Project</a></li>
+               <li>  <a href="">ContactMe</a></li>
+            </ul> 
+         </div>
+
+         <div class="footer-bottom">
+            <p>Copyright &copy; 2023 Designed by <span style="font-size: 20px;">   Manish </span></p>
+         </div>
+      </div>
+   </footer>
+
+</body>
+</html>
